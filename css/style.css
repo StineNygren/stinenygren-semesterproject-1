@@ -6,13 +6,14 @@ html {
 }
 
 body {
-  /* margin: 0; */
+  margin: 0;
   font-size: 1.6rem;
   min-height: 100vh;
 }
 
 :root {
-  --fs-s: clamp(1.3rem, 1.06rem + 1.2vw, 2.5rem);
+  --fs-xs: clamp(1rem, 0.619rem + 1.9048vw, 3rem);
+  --fs-s: clamp(1rem, 0.4rem + 3vw, 4rem);
   --fs-m: clamp(1.5rem, 1rem + 2.5vw, 4rem);
   --fs-l: clamp(2rem, 1rem + 5vw, 7rem);
 
@@ -115,8 +116,10 @@ nav a {
   display: block;
   color: var(--color-white);
   text-decoration: none;
-  font-size: var(--fs-s);
+  font-size: var(--fs-xs);
+  margin-right: 15px;
 }
+
 nav a:hover {
   text-decoration: underline;
 }
@@ -191,6 +194,7 @@ nav a:hover {
 
 .events-home {
   position: relative;
+  margin-bottom: var(--margin-m);
 }
 
 .events-home:hover .overlay {
@@ -200,7 +204,9 @@ nav a:hover {
 .events-home-img img {
   height: auto;
   width: 70%;
-  /* width: clamp(12.5rem, 8.75rem + 18.75vw, 31.25rem); */
+}
+.events-home-img {
+  position: relative;
 }
 .overlay {
   position: absolute;
@@ -210,18 +216,23 @@ nav a:hover {
   background-color: var(--color-alpha);
   overflow: hidden;
   width: 70%;
-  height: 0;
+  height: 7vh;
   transition: 0.5s ease;
   color: var(--color-white);
+  margin-left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--fs-montserrat);
+  padding: 0 5%;
 }
 
 .home-text-wrapper {
   font-size: var(--fs-s);
+  font-family: var(--fs-montserrat);
 }
 
 h3 hr {
-  width: 20%;
-  border-top: 2px solid var(--color-first);
+  width: 10vw;
+  border-top: 4px solid var(--color-first);
   border-bottom: none;
 }
 .home-text-img {
@@ -237,9 +248,10 @@ h3 hr {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  margin-bottom: var(--margin-m);
 }
 
-.parallax-div {
+.alpha-div {
   background-color: var(--color-alpha);
   color: var(--color-white);
   padding: 0 2rem;
@@ -247,6 +259,9 @@ h3 hr {
 
 .museum-text-wrapper {
   flex-wrap: wrap;
+  font-size: var(--fs-s);
+  margin-bottom: var(--margin-m);
+  font-family: var(--fs-montserrat);
 }
 
 .museum-img {
@@ -255,18 +270,44 @@ h3 hr {
   aspect-ratio: 1/1;
 }
 
+@media (min-width: 768px) {
+  .home-text-wrapper,
+  .events-home-wrapper {
+    flex-direction: row;
+  }
+  .home-text-wrapper,
+  .museum-text-wrapper {
+    gap: var(--margin-s);
+  }
+
+  .home-text-wrapper p,
+  .home-text-img,
+  .museum-text-wrapper section,
+  .museum-img {
+    width: 50%;
+  }
+
+  .museum-text-wrapper {
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+  }
+}
+
 /********** footer *********/
 footer {
   background-color: #313131;
   color: var(--color-white);
   font-family: var(--fs-montserrat);
-  font-size: var(--fs-s);
+  font-size: var(--fs-xs);
   padding: var(--margin-s);
 }
 
 footer h5 {
   font-size: var(--fs-m);
   margin: 3%;
+}
+footer section {
+  margin: 5% 0;
 }
 
 .time p {
@@ -275,4 +316,56 @@ footer h5 {
 
 .icon-footer {
   font-size: var(--fs-l);
+}
+
+@media (min-width: 768px) {
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .location-footer {
+    margin-bottom: 30%;
+  }
+}
+
+/******** Visit *********/
+
+.visit-img {
+  background-image: url(../images/library.jpg);
+  width: 100%;
+  height: 30vh;
+  align-items: flex-end;
+  justify-content: end;
+}
+.head-div {
+  padding: 0 10%;
+}
+
+div h1 {
+  font-size: var(--fs-m);
+}
+
+.admission-hours {
+  flex-direction: column;
+}
+.visit-bg {
+  background-color: rgba(111, 91, 151, 0.3);
+  padding: 20%;
+  flex-direction: column;
+}
+.visit-box {
+  background-color: var(--color-white);
+  box-shadow: 3px 3px 5px #666;
+  flex-direction: column;
+  padding: 5%;
+  max-width: 300px;
+  font-size: var(--fs-s);
+}
+.visit-box i {
+  font-size: var(--fs-l);
+}
+
+.visit-box-text {
+  font-size: var(--fs-xs);
 }
