@@ -6,17 +6,15 @@ html {
 }
 
 body {
-  margin: 0;
+  /* margin: 0; */
   font-size: 1.6rem;
   min-height: 100vh;
 }
 
 :root {
-  --fs-xs: clamp(1.5rem, 1.2rem + 1.5vw, 3rem);
-  --fs-s: clamp(1.5rem, 1rem + 2.5vw, 4rem);
-  --fs-m: clamp(2rem, 1.4rem + 3vw, 5rem);
-  --fs-l: clamp(2rem, 1.2rem + 4vw, 6rem);
-  --fs-xl: clamp(2rem, 1rem + 5vw, 7rem);
+  --fs-s: clamp(1.3rem, 1.06rem + 1.2vw, 2.5rem);
+  --fs-m: clamp(1.5rem, 1rem + 2.5vw, 4rem);
+  --fs-l: clamp(2rem, 1rem + 5vw, 7rem);
 
   --fs-chakra: "Chakra Petch", sans-serif;
   --fs-montserrat: "Montserrat", sans-serif;
@@ -26,10 +24,14 @@ body {
   --color-third: #6f5b97;
   --color-forth: #876487;
   --color-white: #fff;
+  --color-alpha: rgba(0, 0, 0, 0.8);
 
   --margin-s: 5%;
   --margin-m: 10%;
   --margin-l: 15%;
+}
+.side-margin {
+  margin: 0 var(--margin-m);
 }
 
 .text-center {
@@ -56,6 +58,19 @@ body {
 
 .bold {
   font-weight: bold;
+}
+.color-first {
+  color: var(--color-first);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--fs-chakra);
+}
+.column-wrapper {
+  flex-direction: column;
 }
 
 /********* Index *********/
@@ -94,15 +109,13 @@ nav {
   width: 100%;
   padding: 5%;
 }
-.nav-bar {
-}
 
 nav a {
   font-family: var(--fs-chakra);
   display: block;
   color: var(--color-white);
   text-decoration: none;
-  font-size: var(--fs-xs);
+  font-size: var(--fs-s);
 }
 nav a:hover {
   text-decoration: underline;
@@ -140,7 +153,7 @@ nav a:hover {
   .menu-label {
     display: none;
   }
-  hr {
+  nav hr {
     display: none;
   }
 }
@@ -151,8 +164,7 @@ nav a:hover {
 }
 
 .hero-text h1 {
-  font-family: var(--fs-chakra);
-  font-size: var(--fs-xl);
+  font-size: var(--fs-l);
   margin-bottom: 0;
 }
 
@@ -169,3 +181,98 @@ nav a:hover {
 }
 
 /******* body *******/
+
+.home-wrapper h3 {
+  font-size: var(--fs-m);
+}
+.overlay h4 p {
+  font-size: var(--fs-s);
+}
+
+.events-home {
+  position: relative;
+}
+
+.events-home:hover .overlay {
+  height: 30%;
+}
+
+.events-home-img img {
+  height: auto;
+  width: 70%;
+  /* width: clamp(12.5rem, 8.75rem + 18.75vw, 31.25rem); */
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-alpha);
+  overflow: hidden;
+  width: 70%;
+  height: 0;
+  transition: 0.5s ease;
+  color: var(--color-white);
+}
+
+.home-text-wrapper {
+  font-size: var(--fs-s);
+}
+
+h3 hr {
+  width: 20%;
+  border-top: 2px solid var(--color-first);
+  border-bottom: none;
+}
+.home-text-img {
+  background-image: url(../images/games.jpg);
+  width: 90%;
+  aspect-ratio: 1/1;
+}
+.exhibition-home-img {
+  background-image: url(../images/show.jpg);
+  width: 100vw;
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax-div {
+  background-color: var(--color-alpha);
+  color: var(--color-white);
+  padding: 0 2rem;
+}
+
+.museum-text-wrapper {
+  flex-wrap: wrap;
+}
+
+.museum-img {
+  background-image: url(../images/museum.jpg);
+  width: 90%;
+  aspect-ratio: 1/1;
+}
+
+/********** footer *********/
+footer {
+  background-color: #313131;
+  color: var(--color-white);
+  font-family: var(--fs-montserrat);
+  font-size: var(--fs-s);
+  padding: var(--margin-s);
+}
+
+footer h5 {
+  font-size: var(--fs-m);
+  margin: 3%;
+}
+
+.time p {
+  margin: 0 10px;
+}
+
+.icon-footer {
+  font-size: var(--fs-l);
+}
