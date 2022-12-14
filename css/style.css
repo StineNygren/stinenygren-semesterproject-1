@@ -188,18 +188,15 @@ nav a:hover {
 .home-wrapper h3 {
   font-size: var(--fs-m);
 }
-.overlay h4 p {
-  font-size: var(--fs-s);
-}
 
 .events-home {
   position: relative;
   margin-bottom: var(--margin-m);
 }
 
-.events-home:hover .overlay {
-  height: 30%;
-}
+/* .events-home:hover .overlay {
+  height: 50%;
+} */
 
 .events-home-img img {
   height: auto;
@@ -222,7 +219,12 @@ nav a:hover {
   margin-left: 50%;
   transform: translateX(-50%);
   font-family: var(--fs-montserrat);
+  font-size: var(--fs-xs);
   padding: 0 5%;
+}
+.overlay h4 {
+  margin-top: 5%;
+  font-size: var(--fs-m);
 }
 
 .home-text-wrapper {
@@ -240,9 +242,12 @@ h3 hr {
   width: 90%;
   aspect-ratio: 1/1;
 }
+.exhibition-home {
+  width: 100%;
+}
 .exhibition-home-img {
   background-image: url(../images/show.jpg);
-  width: 100vw;
+  width: 100%;
   min-height: 500px;
   background-attachment: fixed;
   background-position: center;
@@ -255,6 +260,10 @@ h3 hr {
   background-color: var(--color-alpha);
   color: var(--color-white);
   padding: 0 2rem;
+}
+.alpha-div a {
+  color: var(--color-white);
+  text-decoration: none;
 }
 
 .museum-text-wrapper {
@@ -271,6 +280,10 @@ h3 hr {
 }
 
 @media (min-width: 850px) {
+  .overlay h4 {
+    font-size: var(--fs-xs);
+  }
+
   .home-text-wrapper,
   .events-home-wrapper {
     flex-direction: row;
@@ -293,8 +306,6 @@ h3 hr {
   .museum-text-wrapper {
     flex-direction: row-reverse;
     flex-wrap: nowrap;
-  }
-  .museum-img {
   }
 }
 
@@ -320,7 +331,7 @@ footer section {
 }
 
 .icon-footer {
-  font-size: var(--fs-l);
+  font-size: var(--fs-m);
 }
 
 @media (min-width: 768px) {
@@ -330,7 +341,7 @@ footer section {
     justify-content: space-evenly;
   }
   .location-footer {
-    margin-bottom: 30%;
+    margin-bottom: 20%;
   }
 }
 
@@ -363,6 +374,7 @@ div h1 {
 .admission-hours {
   flex-direction: column;
 }
+
 .visit-bg {
   background-color: rgba(111, 91, 151, 0.3);
   padding: 20%;
@@ -384,6 +396,7 @@ div h1 {
 
 .visit-box-text {
   font-size: var(--fs-xs);
+  font-family: var(--fs-montserrat);
 }
 .visit-text {
   font-family: var(--fs-montserrat);
@@ -395,6 +408,12 @@ div h1 {
 .map {
   height: 50rem;
   margin-bottom: 20%;
+}
+.hours-section {
+  width: 60%;
+}
+.hours-section section {
+  gap: 5%;
 }
 .hours-section h3,
 .admission-section h3,
@@ -412,6 +431,14 @@ div h1 {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: stretch;
+  }
+
+  .shop-box {
+    padding-top: 15%;
+  }
+
+  .shop-titel {
+    margin-bottom: 5%;
   }
   .visit-box {
     height: 100%;
@@ -456,13 +483,14 @@ div h1 {
 .bg-blue h3,
 .bg-blue-purple h3,
 .bg-purple h3 {
-  font-size: var(--fs-s);
+  font-size: var(--fs-m);
 }
 
 .involved-wrapper {
   display: grid;
   gap: 5%;
   margin: var(--margin-s);
+  margin-bottom: 35%;
 }
 .volunteer-img {
   background-image: url(../images/volunteer.jpg);
@@ -475,6 +503,7 @@ div h1 {
   .involved-wrapper {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+    margin-bottom: var(--margin-s);
   }
   .internship-section {
     grid-column: 1 / 1;
@@ -494,6 +523,9 @@ div h1 {
 
 .explore-img {
   background-image: url(../images/exhibition-1.jpg);
+}
+.explore-wrapper {
+  margin-bottom: var(--margin-m);
 }
 .explore-wrapper h2 {
   font-size: var(--fs-l);
@@ -582,7 +614,8 @@ div h1 {
 /* Exhibition */
 
 .exhibition-text {
-  font-size: var(--fs-s);
+  font-size: var(--fs-xs);
+  font-family: var(--fs-montserrat);
 }
 
 .exhibition-nav {
@@ -667,7 +700,7 @@ div h1 {
   padding: var(--margin-m);
 }
 .events-wrapper {
-  position: absolute;
+  /* position: absolute; */
   margin-top: var(--margin-m);
 }
 
