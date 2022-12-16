@@ -194,10 +194,6 @@ nav a:hover {
   margin-bottom: var(--margin-m);
 }
 
-/* .events-home:hover .overlay {
-  height: 50%;
-} */
-
 .events-home-img img {
   height: auto;
   width: 70%;
@@ -295,7 +291,6 @@ h3 hr {
   .home-text-img,
   .museum-img {
     width: 40%;
-    /* aspect-ratio: 1/2; */
   }
 
   .home-text-wrapper p,
@@ -371,14 +366,9 @@ div h1 {
   font-size: var(--fs-m);
 }
 
-.admission-hours {
-  flex-direction: column;
-}
-
 .visit-bg {
   background-color: rgba(111, 91, 151, 0.3);
   padding: 20%;
-  flex-direction: column;
   row-gap: 30px;
   margin: 5% 0;
 }
@@ -487,7 +477,6 @@ div h1 {
 }
 
 .involved-wrapper {
-  display: grid;
   gap: 5%;
   margin: var(--margin-s);
   margin-bottom: 35%;
@@ -700,7 +689,6 @@ div h1 {
   padding: var(--margin-m);
 }
 .events-wrapper {
-  /* position: absolute; */
   margin-top: var(--margin-m);
 }
 
