@@ -184,6 +184,9 @@ nav a:hover {
 }
 
 /******* body *******/
+.alpha-home-text {
+  font-size: var(--fs-m);
+}
 
 .hr-margin {
   font-size: var(--fs-m);
